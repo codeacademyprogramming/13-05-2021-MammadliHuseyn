@@ -11,6 +11,7 @@ const getAzeTranslationOfNumber = (number) => {
         return reservedKeys[0][0];
     let numArr = number.toString().split('').reverse();
     let revArrGroup = groupArr(numArr, 3);
+    console.log(revArrGroup);
     let output = ``;
 
 
@@ -31,6 +32,10 @@ const getAzeTranslationOfNumber = (number) => {
                 output += ` ${reservedKeys[j][digit]} `;
         });
     });
+
+    if (revArrGroup[1] && revArrGroup[1].length == 0) {
+        output = output.replace('min', '');
+    }
 
     output = output.trim().split(' ').reverse().join(" ");
     output.trim();
@@ -63,5 +68,4 @@ function groupArr(data, n) {
         }
     return group;
 }
-
-console.log(getAzeTranslationOfNumber(105));
+console.log(getAzeTranslationOfNumber(1100000));
