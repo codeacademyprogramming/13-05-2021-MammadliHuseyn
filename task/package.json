@@ -1,0 +1,15 @@
+{
+  "name": "num-to-word-pypfront",
+  "version": "1.0.0",
+  "description": "Enter your number and get how the number see with Azerbaijani words",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test"
+  },
+  "keywords": [
+    "number"
+  ],
+  "author": "Mammadli Huseyn",
+  "license": "ISC"
+}
