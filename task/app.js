@@ -66,5 +66,3 @@ function groupArr(data, n) {
         }
     return group;
 }
-
-console.log(getAzeTranslationOfNumber(500000))
