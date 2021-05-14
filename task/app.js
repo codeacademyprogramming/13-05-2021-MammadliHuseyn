@@ -6,7 +6,7 @@ const reservedKeys = [
     millions = "milyon"
 ]
 
-export const getAzeTranslationOfNumber = (number) => {
+const getAzeTranslationOfNumber = (number) => {
     if (number === 0)
         return reservedKeys[0][0];
     let numArr = number.toString().split('').reverse();
@@ -33,7 +33,8 @@ export const getAzeTranslationOfNumber = (number) => {
         });
     });
 
-
+    if (revArrGroup[0].length == 0)
+        output = output.replace(" min ", "");
 
     output = output.trim().split(' ').reverse().join(" ");
     output.trim();
@@ -65,3 +66,5 @@ function groupArr(data, n) {
         }
     return group;
 }
+
+console.log(getAzeTranslationOfNumber(5000000))
