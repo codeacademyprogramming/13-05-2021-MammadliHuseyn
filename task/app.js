@@ -33,7 +33,7 @@ const getAzeTranslationOfNumber = (number) => {
         });
     });
 
-    if (revArrGroup[0].length == 0)
+    if (revArrGroup[1].length == 0)
         output = output.replace(" min ", "");
 
     output = output.trim().split(' ').reverse().join(" ");
@@ -67,4 +67,4 @@ function groupArr(data, n) {
     return group;
 }
 
-console.log(getAzeTranslationOfNumber(5000000))
+console.log(getAzeTranslationOfNumber(500000))
